@@ -1,6 +1,9 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
+import Services from './sections/Services';
+import Destinations from './sections/Destinations';
+import BookingSteps from './sections/BookingSteps';
 import decorBg from './assets/Decore.png';
 
 const App: React.FC = () => {
@@ -16,6 +19,9 @@ const App: React.FC = () => {
       <Navbar />
       <main className="relative z-10 w-full">
         <Hero />
+        <Services />
+        <Destinations />
+        <BookingSteps />
       </main>
     </div>
   );
