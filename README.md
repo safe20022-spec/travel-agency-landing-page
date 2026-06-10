@@ -10,13 +10,14 @@ Jadoo is a visually stunning, high-performance, and pixel-perfect modern travel 
 * **Cinema-Grade Animations:** Fluid scroll-triggered component entries, text reveals, and interactive hover mechanics powered by Framer Motion.
 * **Component-Driven Architecture:** Modular folder structures built with TypeScript interfaces for clean separation of concerns and robust data typing.
 * **Performance Optimized:** Direct custom SVG injection and React Icons implementations to achieve high scores in Core Web Vitals (LCP/FID).
+* **Advanced Layout Stability:** Rigorous layout boundary protections (`overflow-x-clip`, `overflow-y-auto`) ensuring zero layout shifts during complex spring-physics web rendering.
 
 ## 🛠️ Tech Stack
 * **Frontend Library:** React (Vite-backed setup)
 * **Type System:** TypeScript (Strict Mode)
 * **Styling Framework:** Tailwind CSS
 * **Animation Engine:** Framer Motion
-* **Icon Packs:** React Icons (`react-icons/io5`, `react-icons/ri`, `react-icons/fi`, `react-icons/md`)
+* **Icon Packs:** React Icons (`react-icons/io5`, `react-icons/ri`, `react-icons/fi`, `react-icons/md`, `react-icons/hi`)
 * **Build Tool:** Vite
 
 ---
@@ -32,8 +33,17 @@ Displays high-fidelity service cards (*Calculated Weather, Best Flights, Local E
 ### 3. 🗺️ Top Destinations
 A semantic grid displaying featured global packages. Implements high-end cinematic image micro-zooms (`group-hover:scale-110`) and bounce animation triggers (`whileHover: { y: -10 }`) utilizing spring physics.
 
-### 4. 🛄 Booking Steps workflow
+### 4. 🛄 Booking Steps Workflow
 A conversion-focused split section. The left column outlines a 3-step journey leveraging highly customized embedded SVG vectors. The right column renders complex layered, staggered interactive flight cards (*Trip to Greece* & *Trip to Rome*) with interactive progress metrics.
+
+### 5. 💬 Testimonials & Sponsors (New)
+A highly advanced, interactive vertical card stack (Stacked Cards Carousel) built with `AnimatePresence` for seamless, spring-backed vertical transitions. Paired with a fluid brand sponsorship ribbon utilizing grayscale filters and hover-revealed original opacity.
+
+### 6. ✉️ Newsletter Subscription Section (New)
+A beautifully customized asymmetric subscription card featuring non-standard corner radiuses matching the exact Figma design specification. Implements strict client-side validation, embedded input icons, and floating 3D paper plane micro-animations powered by `whileTap` gesture controls.
+
+### 7. 🏁 Footer Structure (New)
+A robust multi-column legal and sitemap matrix utilizing semantic HTML5 tags. Integrates high-fidelity brand interaction via custom responsive CSS social media gradients and interactive App Store/Google Play store downloading node wrappers.
 
 ---
 
@@ -42,12 +52,16 @@ A conversion-focused split section. The left column outlines a 3-step journey le
 ```plaintext
 src/
 ├── assets/          # Compressed images, backgrounds, and brand assets
-├── components/      # Global reusable layout elements (Navbar, Buttons)
+├── components/      # Global reusable layout elements (Navbar, Buttons, Footer)
+│   ├── Navbar.tsx
+│   └── Footer.tsx
 ├── sections/        # Main landing page layout architecture
 │   ├── Hero.tsx
 │   ├── Services.tsx
 │   ├── Destinations.tsx
-│   └── BookingSteps.tsx
+│   ├── BookingSteps.tsx
+│   ├── Testimonials.tsx
+│   └── Newsletter.tsx
 ├── App.tsx          # Application root wrapper with base overflow protection
 └── main.tsx         # Application bundle entry point
 🚀 Getting Started
@@ -64,7 +78,7 @@ git clone [https://github.com/safe20022-spec/travel-agency-landing-page.git](htt
 Navigate into the project directory:
 
 Bash
-cd jadoo-travel
+cd travel-agency-landing-page
 Install dependencies:
 
 Bash
@@ -78,8 +92,8 @@ Build for production:
 Bash
 npm run build
 🧑‍💻 Production & Code Quality Standards
-Zero Layout Shifts: Layout boundaries are securely managed to guarantee smooth viewport translations during layout scaling.
+Zero Layout Shifts (CLS): Layout and viewport boundaries are strictly secured using advanced modern overflow properties (overflow-x-clip), guaranteeing zero unexpected visual movements or nested double scrollbars during initialization.
 
-Clean Interfaces: Strict type typing for data structures (StepItem, DestinationCardProps, ServiceCardProps) ensuring full type safety across components.
+Strict Code Quality & Typing: Core application logic strictly implements custom TypeScript interfaces (TestimonialItem, StepItem, DestinationCardProps) ensuring comprehensive type-safety across component states.
 
-Asset Lazy-Loading: Image nodes incorporate explicit standard HTML lazy loading attributes to maximize rendering throughput.
+Asset Optimization: Image nodes incorporate explicit standard HTML lazy loading attributes alongside vector SVG rendering paths to maximize overall Lighthouse rendering scores.
